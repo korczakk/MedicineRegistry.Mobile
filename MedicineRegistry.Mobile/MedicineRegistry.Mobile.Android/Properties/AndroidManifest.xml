@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.medicineregistry.mobile" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="29" />
+	<application android:label="MedicineRegistry.Mobile.Android" android:theme="@style/MainTheme">  
+    <activity android:name="microsoft.identity.client.BrowserTabActivity" android:configChanges="orientation|screenSize">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="msauth" 
+              android:host="com.companyname.medicineregistry.mobile"
+              android:path="/G131MJ+ZCY6W0Ib7+TsO3YCbtFs=" />
+      </intent-filter>
+    </activity>
+  </application>
+  <uses-permission android:name="android.permission.INTERNET" />  
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>
