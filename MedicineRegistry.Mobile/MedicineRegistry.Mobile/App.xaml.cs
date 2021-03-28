@@ -28,8 +28,12 @@ namespace MedicineRegistry.Mobile
     {
     }
 
-    protected override void OnResume()
+    protected async override void OnResume()
     {
+      if (AuthService.AuthResult is { } && AuthService.IsTokenExpired())
+      {
+        await AuthService.SignIn(ParentWindow);
+      }
     }
   }
 }
